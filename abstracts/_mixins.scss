@@ -1,3 +1,4 @@
+// Border radius
 @mixin border-radius($value) {
     border-radius: $value;
     -moz-border-radius: $value;
@@ -5,9 +6,17 @@
     -webkit-border-radius: $value;
 }
 
-// Mixin to define font-family
+// Font-family
 @mixin font-face($family, $size, $weight) {
     font-family: $family;
     font-size: $size;
     font-weight: $weight;
+}
+
+// Transitions
+@mixin transition ($att, $duration, $timing, $delay: 0s) {
+    -webkit-transition: $att $duration $timing $delay;
+    -moz-transition:    $att $duration $timing $delay;
+    -ms-transition:     $att $duration $timing $delay;
+    transition:         $att $duration $timing $delay;
 }

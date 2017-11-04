@@ -11,5 +11,12 @@
       height: 15px;
       margin-right: 5px;
     }
-  }    
+  }  
+
+  @include transition (all, .8s, ease-out, .3s);  
+}
+
+.form-container-default {
+  transform: translateX(30px);
+  opacity: 0;
 }

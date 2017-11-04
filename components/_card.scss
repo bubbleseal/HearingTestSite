@@ -6,3 +6,22 @@ aside {
     margin-bottom: 20px;
   }
 }
+
+.hiddenCards {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+
+// Transition Control
+aside:nth-child(1) {
+  @include transition( all, 0.5s, ease-in);
+}
+
+aside:nth-child(2) {
+  @include transition( all, 0.5s, ease-in, .2s);
+}
+
+aside:nth-child(3) {
+  @include transition( all, 0.5s, ease-in, .4s);
+}
