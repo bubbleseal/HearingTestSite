@@ -1,0 +1,96 @@
+// Basic Colors
+$white:         white;
+$turqoise:      #75c5bc;
+$steel-blue:    #469F95;
+$midnight-blue: #012d6c;
+$gray:          #919191;
+$light-gray:    #b0b1b2;
+$marigold:      #ffcf47;
+$orange:        #D9A200;
+$green:         #a4cf75;
+
+
+// Main Colors
+$color-base:            $white;
+$color-background:      $turqoise;
+
+
+// Text Colors
+$color-base-text:       $gray;
+$color-header-text:     $steel-blue;
+$color-accent-text:     $midnight-blue;
+$color-form-text:       $midnight-blue;
+$color-button-text:     $white;
+$color-security-text:   $green;
+$color-progressbar-text:$midnight-blue;
+$color-invertbg-text:   $white;
+$color-footer-text:     $midnight-blue;
+
+
+// Form Colors
+$color-border:          $marigold;
+$color-progressbar:     $green;
+$color-input:           $light-gray;
+$color-button-top:      $marigold;
+$color-button-bottom:   $orange;
+
+
+// Standard Text Colors
+body {
+    color: $color-base-text;
+    h1 {  
+        color: $color-header-text;
+    }
+    h2 {
+        color: $color-form-text;
+    }
+    h5 {
+        color: $color-security-text;
+    }
+    p {
+        color: $color-base-text;
+    }
+    span {
+        color: $color-accent-text;
+    }
+}
+
+// Header Colors
+.header-bar {
+    background: $color-base;
+    p {
+        color: $color-header-text;
+    }
+}
+
+// Form Colors
+.form-container {
+    background: $color-base;
+
+    .progress-text {
+        color: $color-progressbar-text;
+    }
+}
+
+form {
+    label {
+        color: $color-base-text;
+    }
+    .btn {
+        color: $color-button-text;
+    }
+}
+
+.details {
+    background: $color-background;
+    h1, p {
+        color: $color-invertbg-text;
+    }
+}
+
+// Footer Colors
+.reference {
+    .description {
+        color: $color-footer-text;
+    }
+}

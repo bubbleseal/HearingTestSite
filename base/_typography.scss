@@ -1,0 +1,109 @@
+// Font Family
+$primary-font :     Arial;
+$secondary-font :   Helvetica;
+$font-family :      sans-serif;
+$base-font:         $primary-font, $secondary-font, $font-family;
+
+// Font size
+$size-large:    1.37em;
+$size-medium:   1em;
+$size-small:    0.8em;
+
+// Font Weights
+$fine:      200;
+$regular:   400;
+$semi-bold: 700;
+$bold:      900;
+
+// Letter Spacing
+$letterspace:  0.5px;
+
+
+//Base fonts
+body {
+    h1 {
+        @include font-face($base-font, $size-large, $semi-bold);
+        margin: 0;
+    }
+
+    h2 {
+        @include font-face($base-font, $size-medium, $semi-bold);
+        margin: 5px 0;
+    }
+
+    h5 {
+        @include font-face($base-font, $size-small, $semi-bold);
+        margin: 15px 0;
+    }
+
+    span {
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    p {
+        @include font-face($base-font, $size-small, $regular);
+        letter-spacing: $letterspace;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+
+// Header Fonts
+.header-bar {
+    .enquiry-desc {
+        @include font-face($base-font, $size-small, $fine);
+        margin: 5px 0 0 0;
+        letter-spacing: $letterspace;
+    }
+}
+
+
+//Form fonts
+form {
+    label {
+        @include font-face($base-font, $size-medium, $regular);
+        letter-spacing: $letterspace;
+        margin: 0 0 0 5px;
+    }
+    .btn {
+        @include font-face($base-font, $size-medium, $semi-bold);
+        letter-spacing: $letterspace;
+    }
+}
+
+// Progress Bar Fonts
+.progress{
+    .progress-text {
+        text-transform: none;
+    }
+}
+
+
+.details {
+    span {
+        font-weight: $bold;
+    }
+    p {
+        @include font-face($base-font, $size-small, $semi-bold);
+    }
+}
+
+
+// Footer fonts
+.reference {
+    .description {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    p {
+        font-style: italic;
+        margin: 30px 0 0 0;
+    }
+    .policy-text {
+        margin: 13px 0; 
+    }
+}

@@ -1,0 +1,23 @@
+@import 'abstracts/mixins';
+
+@import 'base/colors';
+@import 'base/typography';
+
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/progressbar';
+@import 'components/card';
+
+@import 'layout/forms';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+body {
+  max-width: 100%;
+  x-overflow: hidden;
+}
+
+.container {
+  max-width: 940px !important;
+}

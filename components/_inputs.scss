@@ -1,0 +1,21 @@
+.radiobutton {
+    display: block;
+    border: .5px solid $color-input;
+    @include border-radius(10px);
+    margin: 12px 0;
+    padding: 10px;
+
+    input {
+        height: 20px;
+        width: 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: .5px solid $color-input;
+        @include border-radius(3px);
+        padding: 10px;
+
+        &:checked {
+            background: $color-input;
+        }
+    }
+}

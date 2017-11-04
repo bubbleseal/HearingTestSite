@@ -1,0 +1,13 @@
+@mixin border-radius($value) {
+    border-radius: $value;
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    -webkit-border-radius: $value;
+}
+
+// Mixin to define font-family
+@mixin font-face($family, $size, $weight) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}

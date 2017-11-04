@@ -1,0 +1,17 @@
+.main {
+  position: relative;
+
+  .header-bar {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .background-img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateY(-9%);
+  }
+}
