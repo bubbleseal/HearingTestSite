@@ -21,89 +21,105 @@ $letterspace:  0.5px;
 
 //Base fonts
 body {
-    h1 {
-        @include font-face($base-font, $size-large, $semi-bold);
-        margin: 0;
-    }
+  h1 {
+    @include font-face($base-font, $size-large, $semi-bold);
+    margin: 0;
+  }
 
-    h2 {
-        @include font-face($base-font, $size-medium, $semi-bold);
-        margin: 5px 0;
-    }
+  h2 {
+    @include font-face($base-font, $size-medium, $semi-bold);
+    margin: 5px 0;
 
-    h5 {
-        @include font-face($base-font, $size-small, $semi-bold);
-        margin: 15px 0;
+    @include breakpoint(small){
+      @include font-face($base-font, $size-large, $semi-bold);
     }
+  }
 
-    span {
-        text-transform: uppercase;
-        margin: 0;
-    }
+  h5 {
+    @include font-face($base-font, $size-small, $semi-bold);
+    margin: 15px 0;
+  }
 
-    p {
-        @include font-face($base-font, $size-small, $regular);
-        letter-spacing: $letterspace;
-    }
+  span {
+    text-transform: uppercase;
+    margin: 0;
+  }
 
-    a {
-        text-decoration: underline;
+  p {
+    @include font-face($base-font, $size-small, $regular);
+    letter-spacing: $letterspace;
+
+    @include breakpoint(small){
+      @include font-face($base-font, $size-medium, $regular);
     }
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 
 // Header Fonts
 .header-bar {
-    .enquiry-desc {
-        @include font-face($base-font, $size-small, $fine);
-        margin: 5px 0 0 0;
-        letter-spacing: $letterspace;
+  .enquiry-desc {
+    @include font-face($base-font, $size-small, $fine);
+    margin: 5px 0 0 0;
+    letter-spacing: $letterspace;
+
+    @include breakpoint(small){
+      @include font-face($base-font, $size-medium, $fine);
     }
+  }
 }
 
 
 //Form fonts
 form {
-    label {
-        @include font-face($base-font, $size-medium, $regular);
-        letter-spacing: $letterspace;
-        margin: 0 0 0 5px;
-    }
-    .btn {
-        @include font-face($base-font, $size-medium, $semi-bold);
-        letter-spacing: $letterspace;
-    }
+  label {
+    @include font-face($base-font, $size-medium, $regular);
+    letter-spacing: $letterspace;
+    margin: 0 0 0 5px;
+  }
+  .btn {
+    @include font-face($base-font, $size-medium, $semi-bold);
+    letter-spacing: $letterspace;
+  }
 }
 
 // Progress Bar Fonts
 .progress{
-    .progress-text {
-        text-transform: none;
-    }
+  .progress-text {
+    text-transform: none;
+  }
 }
 
 
 .details {
-    span {
-        font-weight: $bold;
+  span {
+    font-weight: $bold;
+  }
+  p {
+    @include font-face($base-font, $size-small, $semi-bold);
+    
+    @include breakpoint(small){
+      @include font-face($base-font, $size-medium, $semi-bold);
     }
-    p {
-        @include font-face($base-font, $size-small, $semi-bold);
-    }
+  }
 }
 
 
 // Footer fonts
 .reference {
-    .description {
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-    p {
-        font-style: italic;
-        margin: 30px 0 0 0;
-    }
-    .policy-text {
-        margin: 13px 0; 
-    }
+  .description {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  p {
+    font-style: italic;
+    margin: 30px 0 0 0;
+  }
+  .policy-text {
+    margin: 13px 0; 
+  }
 }

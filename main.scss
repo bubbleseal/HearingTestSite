@@ -3,11 +3,14 @@
 
 @import 'base/colors';
 @import 'base/typography';
+@import 'base/config';
 
 @import 'components/buttons';
 @import 'components/inputs';
 @import 'components/progressbar';
 @import 'components/card';
+@import 'components/logos';
+
 
 @import 'layout/forms';
 @import 'layout/grid';
@@ -16,7 +19,7 @@
 
 body {
   max-width: 100%;
-  x-overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {

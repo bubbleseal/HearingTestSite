@@ -1,9 +1,18 @@
 aside {
   margin: 0 10px;
 
+  @include breakpoint (small) {
+    margin: 25px 0;
+    padding: 0 30px;
+  }
+
   img {
     height: 120px;
     margin-bottom: 20px;
+
+    @include breakpoint (small) {
+      height: 150px;
+    }
   }
 }
 
@@ -13,15 +22,15 @@ aside {
 }
 
 
-// Transition Control
+// Transition Animation
 aside:nth-child(1) {
   @include transition( all, 0.5s, ease-in);
 }
 
 aside:nth-child(2) {
-  @include transition( all, 0.5s, ease-in, .2s);
+  @include transition( all, 0.5s, ease-in, 0.2s);
 }
 
 aside:nth-child(3) {
-  @include transition( all, 0.5s, ease-in, .4s);
+  @include transition( all, 0.5s, ease-in, 0.4s);
 }

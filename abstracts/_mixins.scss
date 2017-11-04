@@ -20,3 +20,37 @@
     -ms-transition:     $att $duration $timing $delay;
     transition:         $att $duration $timing $delay;
 }
+
+//Gradient
+@mixin lineargradient-background ($color-1, $color-2){
+    background-image: -webkit-gradient(linear, left top, left bottom, from($color-1), to($color-2));
+    background-image: -webkit-linear-gradient(top, $color-1, $color-2);
+    background-image: -moz-linear-gradient(top, $color-1, $color-2);
+    background-image: -ms-linear-gradient(top, $color-1, $color-2);
+    background-image: -o-linear-gradient(top, $color-1, $color-2);
+    background-image: linear-gradient(to bottom, $color-1, $color-2);
+}
+
+// Breakpoints
+@mixin breakpoint ($breakpoint){
+    @if $breakpoint == tiny {
+        @media screen and (max-width: 479px) {
+            @content;
+        }
+    }
+    @if $breakpoint == small {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @if $breakpoint == medium {
+        @media screen and (max-width: 991px) {
+            @content;
+        }
+    }
+    @if $breakpoint == large {
+        @media screen and (max-width: 1119px) {
+            @content;
+        }
+    }
+}
