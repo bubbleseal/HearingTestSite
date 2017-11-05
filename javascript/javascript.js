@@ -1,13 +1,24 @@
 $(document).ready(function () {
     $('.form-container').removeClass('form-container-default').addClass('fadeX-anim');
 
-    $(window).scroll( function(){
+    $(window).scroll(function () {
         if ($(window).width() >= 768 && $(window).scrollTop() == 400) {
             $('aside').removeClass('hiddenCards').addClass('fadeY-anim');
         } else if ($(window).width() < 768) {
-            $('aside').removeClass('hiddenCards').addClass('fadeY-anim');            
+            $('aside').removeClass('hiddenCards').addClass('fadeY-anim');
         }
     });
+
+    // Form validation
+    $('button').prop('disabled', true);
+    $('input[name="age-selection"]').click(function(){
+         $('button').prop('disabled', false).css('cursor','pointer');;
+    });
+       
+    $('button').click(function(){
+        alert('Form submitted.');
+    });
+
 
     //Scrolling effect
     $('a[href*="#"]').click(function (event) {

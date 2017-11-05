@@ -129,6 +129,7 @@ form .btn {
 .btn {
   height: 60px;
   margin: 20px 0;
+  cursor: not-allowed;
   background-color: #ffd65e;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffd65e), to(#febf04));
   background-image: -webkit-linear-gradient(top, #ffd65e, #febf04);
