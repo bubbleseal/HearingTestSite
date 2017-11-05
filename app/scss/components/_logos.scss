@@ -1,0 +1,9 @@
+.logo {
+    @include breakpoint (small) {
+        padding: 10px 0;
+    }
+
+    @include breakpoint (tiny) {
+        padding: 20px 0;
+    }
+}
