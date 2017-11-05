@@ -1,0 +1,25 @@
+{
+  "name": "hearingtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubbleseal/HearingTestSite.git"
+  },
+  "author": "Simone Chong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bubbleseal/HearingTestSite/issues"
+  },
+  "homepage": "https://github.com/bubbleseal/HearingTestSite#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.8"
+  }
+}
