@@ -12,7 +12,7 @@ $(document).ready(function () {
     // Form validation
     $('button').prop('disabled', true);
     $('input[name="age-selection"]').click(function(){
-         $('button').prop('disabled', false).css('cursor','pointer');;
+         $('button').prop('disabled', false);
     });
        
     $('button').click(function(){

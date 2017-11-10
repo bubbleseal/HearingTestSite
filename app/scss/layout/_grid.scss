@@ -1,3 +1,18 @@
+%fullwidth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+%grid-container {
+  width: 70%;
+}
+
+
+.container {
+    @extend %grid-container;
+}
+
 .details {
   padding: 50px 0;
 

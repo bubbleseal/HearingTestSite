@@ -1,4 +1,17 @@
-// Border radius
+// Layout
+@mixin flexbox ($layout: center) {
+  display: flex;
+  justify-content: $layout;
+}
+
+
+// Styling
+@mixin box-sizing($value: content-box){
+    box-sizing: $value;
+    -moz-box-sizing: $value;
+    -webkit-box-sizing: $value;
+}
+
 @mixin border-radius($value) {
     border-radius: $value;
     -moz-border-radius: $value;
@@ -6,22 +19,6 @@
     -webkit-border-radius: $value;
 }
 
-// Font-family
-@mixin font-face($family, $size, $weight) {
-    font-family: $family;
-    font-size: $size;
-    font-weight: $weight;
-}
-
-// Transitions
-@mixin transition ($att, $duration, $timing, $delay: 0s) {
-    -webkit-transition: $att $duration $timing $delay;
-    -moz-transition:    $att $duration $timing $delay;
-    -ms-transition:     $att $duration $timing $delay;
-    transition:         $att $duration $timing $delay;
-}
-
-//Gradient
 @mixin lineargradient-background ($color-1, $color-2){
     background-image: -webkit-gradient(linear, left top, left bottom, from($color-1), to($color-2));
     background-image: -webkit-linear-gradient(top, $color-1, $color-2);
@@ -30,6 +27,24 @@
     background-image: -o-linear-gradient(top, $color-1, $color-2);
     background-image: linear-gradient(to bottom, $color-1, $color-2);
 }
+
+
+// Fonts
+@mixin font-face($family, $size, $weight) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+
+// Animations
+@mixin transition ($att, $duration, $timing, $delay: 0s) {
+    -webkit-transition: $att $duration $timing $delay;
+    -moz-transition:    $att $duration $timing $delay;
+    -ms-transition:     $att $duration $timing $delay;
+    transition:         $att $duration $timing $delay;
+}
+
 
 // Breakpoints
 @mixin breakpoint ($breakpoint){
