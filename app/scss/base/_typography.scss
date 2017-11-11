@@ -88,8 +88,9 @@ form {
 }
 
 // Progress Bar Fonts
-.progress{
+.progressbar-container{
   .progress-text {
+    @include font-face($base-font, $size-small, $regular);    
     text-transform: none;
   }
 }

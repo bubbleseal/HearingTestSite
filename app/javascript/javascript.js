@@ -11,12 +11,24 @@ $(document).ready(function () {
 
     // Form validation
     $('button').prop('disabled', true);
-    $('input[name="age-selection"]').click(function(){
-         $('button').prop('disabled', false);
+    $('input[name="age-selection"]').click(function () {
+        $('button').prop('disabled', false);
     });
-       
-    $('button').click(function(){
-        alert('Form submitted.');
+
+    $('button').click(function (ev) {
+        ev.preventDefault();
+        var num = 0;
+        var runTime = 0;
+        var interval = setInterval(function () {
+                        $('.progress-text').text('Your Progress ' + num + '%');
+                        $('.progress-bar').css('width', num +'%');
+                        num += 10;
+                        runTime++;
+
+                        if (runTime === 11) {
+                            clearInterval(interval);
+                        }
+                    }, 150);
     });
 
 
