@@ -1,9 +1,18 @@
 .logo {
-    @include breakpoint (small) {
-        padding: 10px 0;
-    }
+  width: 25%;
+  padding: 0 10px;
 
-    @include breakpoint (tiny) {
-        padding: 20px 0;
-    }
+  @include breakpoint (small) {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  @include breakpoint (tiny) {
+    padding: 20px 0;
+  }
+
+  img {
+      max-width: 95%;
+      max-height: 95%;
+  }
 }

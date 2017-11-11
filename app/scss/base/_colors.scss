@@ -1,10 +1,13 @@
 // Basic Colors
+$black:         black;
 $white:         white;
 $turqoise:      #75c5bc;
 $steel-blue:    #469F95;
-$midnight-blue: #012d6c;
+$midnight-blue: #0b418e;
+$blue:          #2e7ff2;
 $gray:          #919191;
 $light-gray:    #b0b1b2;
+$almost-white:  #f1f1f1;
 $marigold:      #ffcf47;
 $orange:        #D9A200;
 $green:         #a4cf75;
@@ -25,12 +28,15 @@ $color-security-text:   $green;
 $color-progressbar-text:$midnight-blue;
 $color-invertbg-text:   $white;
 $color-footer-text:     $midnight-blue;
+$color-footer-a-text:   $blue;
 
 
 // Form Colors
 $color-border:          $marigold;
+$color-progressbar-bg:  $almost-white;
 $color-progressbar:     $green;
 $color-input:           $light-gray;
+$color-input-hover:     $black;
 $color-check:           $marigold;
 $color-button-top:      $marigold;
 $color-button-bottom:   $orange;
@@ -54,6 +60,11 @@ body {
     span {
         color: $color-accent-text;
     }
+}
+
+
+body {
+    background: $color-background;
 }
 
 // Header Colors
@@ -91,7 +102,14 @@ form {
 
 // Footer Colors
 .reference {
-    .description {
+    background: $color-base;
+    .description, a {
         color: $color-footer-text;
+
+        @include transition (color, 0.3s, ease-out);
+    }
+
+    a:hover{
+        color: $color-footer-a-text;
     }
 }

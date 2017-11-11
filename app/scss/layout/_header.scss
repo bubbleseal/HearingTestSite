@@ -1,34 +1,79 @@
-.main {
+.header-bar {
+  @include flexbox (center);
+  padding: 12px 0;
   position: relative;
+  top: 0;
+  z-index: 5;
+  text-align: center;
+}
 
-  .header-bar {
+.landing-container {
+  @include flexbox (center);
+}
+
+.main-container {
+  @extend %grid-container;
+  @include flexbox (flex-end);
+
+  @include breakpoint (small) {
     width: 100%;
-    padding: 12px 0;
+    @include flexbox (center);
   }
 
-  .container-mobile {
+  .inner-container {
+    width: 50%;
+    text-align: center;
+
     @include breakpoint (small) {
-      padding: 0 80px;
+      width: 100%;
+    }
+    
+  }
+
+  .form-container {
+    width: 50%;
+
+    @include breakpoint (huge) {
+      width: 30%;
+      margin: 100px 10%;
+    }
+
+    @include breakpoint (small) {
+      width: 70%;
     }
     @include breakpoint (tiny) {
-      padding: 0 20px;
+      width: 85%;
     }
   }
+}
 
-  .background-img {
-    height: 130%;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    transform: translateY(-9%);
 
-    @include breakpoint (large){
-      transform: translateX(-10%);
-    }
+.container-mobile {
+  @include breakpoint (small) {
+    padding: 0 80px;
+  }
+  @include breakpoint (tiny) {
+    padding: 0 20px;
+  }
+}
 
-    @include breakpoint (medium){
-      transform: translateX(-9%);
-    }
+
+.background-img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: translateY(-9%);
+
+  @include breakpoint (huge) {
+    transform: translateY(-20%);
+  }
+  @include breakpoint (large) {
+    transform: translateX(-10%);
+    width: auto;
+  }
+  @include breakpoint (medium) {
+    transform: translateX(-12%);
   }
 }

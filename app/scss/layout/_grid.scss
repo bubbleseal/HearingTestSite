@@ -1,8 +1,28 @@
+%fullwidth-container {
+  width: 100%;
+  @include flexbox (center);
+}
+
+%grid-container {
+  width: 70%;
+}
+
+
+.container {
+  @extend %grid-container;
+}
+
+
 .details {
   padding: 50px 0;
+  @extend %fullwidth-container;
 
   .details-container {
     margin-top: 40px;
+    @include flexbox (space-between); 
 
+    @include breakpoint (small) {
+      flex-direction: column;
+    }
   }
 }

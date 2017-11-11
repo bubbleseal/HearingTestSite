@@ -1,23 +1,33 @@
-.radiobutton {
-    display: block;
+.radiobutton{
+    @include flexbox (flex-start);
+    align-items: center;
     border: .5px solid $color-input;
     @include border-radius(10px);
     margin: 12px 0;
-    padding: 10px;
+    padding: 12px;
+
 
     input {
+        @include box-sizing (border-box);
         height: 20px;
         width: 20px;
+        margin: 0 10px 0 0;
+        padding: 5px;
         -webkit-appearance: none;
         -moz-appearance: none;
         border: .5px solid $color-input;
         @include border-radius(3px);
-        padding: 10px;
-        cursor: pointer;
+        cursor: pointer;    
         outline: none;
+
+        @include transition (all, 0.2s, ease-out);
 
         &:hover {
             border: 2px solid $gray;
+
+            & + label{
+                color: $color-input-hover;
+            } 
         }
         &:checked {
             background: $color-check;

@@ -49,7 +49,11 @@ body {
     @include font-face($base-font, $size-small, $regular);
     letter-spacing: $letterspace;
 
-    @include breakpoint(small){
+    @include breakpoint(huge) {
+      @include font-face($base-font, $size-medium, $regular);
+    }
+
+    @include breakpoint(small) {
       @include font-face($base-font, $size-medium, $regular);
     }
   }
@@ -88,19 +92,24 @@ form {
 }
 
 // Progress Bar Fonts
-.progress{
+.progressbar-container{
   .progress-text {
+    @include font-face($base-font, $size-small, $regular);    
     text-transform: none;
   }
 }
 
 
 .details {
+  .title {
+    text-align: center;
+  }
   span {
     font-weight: $bold;
   }
   p {
     @include font-face($base-font, $size-small, $semi-bold);
+    text-align: center;
     
     @include breakpoint(small){
       @include font-face($base-font, $size-medium, $semi-bold);
@@ -111,6 +120,7 @@ form {
 
 // Footer fonts
 .reference {
+  text-align: center;
   .description {
     margin-top: 0;
     margin-bottom: 20px;

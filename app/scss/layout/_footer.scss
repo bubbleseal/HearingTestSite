@@ -1,7 +1,15 @@
 .reference {
   padding: 50px 0;
+  @include flexbox(center);
 
-  .row {
+  .logo-container {
     margin: 30px 0;
+    width: 100%;
+    @include flexbox (space-between);
+    align-items: center;
+
+    @include breakpoint (small) {
+      flex-direction: column;
+    }
   }
 }

@@ -5,15 +5,17 @@
   padding: 10px;
 
   .security-text {
+    display: flex;
+    justify-content: center;
     margin: 15px 0;
-
+    
     .icon {
       height: 15px;
       margin-right: 5px;
     }
   }  
 
-  @include transition (all, .8s, ease-out, .3s);  
+  @include transition (all, 0.8s, ease-out, 0.3s);  
 }
 
 .form-container-default {
