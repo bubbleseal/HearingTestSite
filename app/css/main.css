@@ -17,7 +17,7 @@ body h1 {
 }
 
 body h2 {
-  color: #012d6c;
+  color: #0b418e;
 }
 
 body h5 {
@@ -29,7 +29,7 @@ body p {
 }
 
 body span {
-  color: #012d6c;
+  color: #0b418e;
 }
 
 .header-bar {
@@ -45,7 +45,7 @@ body span {
 }
 
 .form-container .progress-text {
-  color: #012d6c;
+  color: #0b418e;
 }
 
 form label {
@@ -64,8 +64,16 @@ form .btn {
   color: white;
 }
 
-.reference .description {
-  color: #012d6c;
+.reference .description, .reference a {
+  color: #0b418e;
+  -webkit-transition: color 0.3s ease-out 0s;
+  -moz-transition: color 0.3s ease-out 0s;
+  -ms-transition: color 0.3s ease-out 0s;
+  transition: color 0.3s ease-out 0s;
+}
+
+.reference a:hover {
+  color: #2e7ff2;
 }
 
 body h1 {
@@ -180,6 +188,10 @@ form .btn {
     font-size: 1em;
     font-weight: 700;
   }
+}
+
+.reference {
+  text-align: center;
 }
 
 .reference .description {
@@ -403,6 +415,16 @@ aside:nth-child(3) {
   }
 }
 
+.logo {
+  width: 25%;
+  padding: 0 10px;
+}
+
+.logo img {
+  max-width: 95%;
+  max-height: 95%;
+}
+
 @media screen and (max-width: 767px) {
   .logo {
     padding: 10px 0;
@@ -529,10 +551,16 @@ aside:nth-child(3) {
 
 .reference {
   padding: 50px 0;
+  display: flex;
+  justify-content: center;
 }
 
-.reference .row {
+.reference .logo-container {
   margin: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body {
