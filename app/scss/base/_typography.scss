@@ -97,11 +97,15 @@ form {
 
 
 .details {
+  .title {
+    text-align: center;
+  }
   span {
     font-weight: $bold;
   }
   p {
     @include font-face($base-font, $size-small, $semi-bold);
+    text-align: center;
     
     @include breakpoint(small){
       @include font-face($base-font, $size-medium, $semi-bold);

@@ -1,5 +1,5 @@
 // Layout
-@mixin flexbox ($layout: center) {
+@mixin flexbox ($layout: flex-start) {
   display: flex;
   justify-content: $layout;
 }

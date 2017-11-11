@@ -159,6 +159,10 @@ form .btn {
   text-transform: none;
 }
 
+.details .title {
+  text-align: center;
+}
+
 .details span {
   font-weight: 900;
 }
@@ -167,6 +171,7 @@ form .btn {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8em;
   font-weight: 700;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -320,6 +325,10 @@ form .btn {
 
 aside {
   margin: 0 10px;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 767px) {
@@ -332,6 +341,7 @@ aside {
 aside img {
   height: 120px;
   margin-bottom: 20px;
+  align-self: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -435,6 +445,12 @@ aside:nth-child(3) {
   opacity: 0;
 }
 
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .container, .main-container {
   width: 70%;
 }
@@ -445,6 +461,8 @@ aside:nth-child(3) {
 
 .details .details-container {
   margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-bar {

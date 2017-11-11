@@ -1,5 +1,8 @@
 aside {
   margin: 0 10px;
+  width: 30%;
+  @include flexbox();
+  flex-direction: column;
 
   @include breakpoint (small) {
     margin: 25px 0;
@@ -9,6 +12,7 @@ aside {
   img {
     height: 120px;
     margin-bottom: 20px;
+    align-self: center;
 
     @include breakpoint (small) {
       height: 150px;

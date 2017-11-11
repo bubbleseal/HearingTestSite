@@ -1,7 +1,6 @@
 %fullwidth-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include flexbox (center);
 }
 
 %grid-container {
@@ -10,14 +9,16 @@
 
 
 .container {
-    @extend %grid-container;
+  @extend %grid-container;
 }
+
 
 .details {
   padding: 50px 0;
+  @extend %fullwidth-container;
 
   .details-container {
     margin-top: 40px;
-
+    @include flexbox (space-between); 
   }
 }
