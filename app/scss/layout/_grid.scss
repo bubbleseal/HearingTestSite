@@ -20,5 +20,9 @@
   .details-container {
     margin-top: 40px;
     @include flexbox (space-between); 
+
+    @include breakpoint (small) {
+      flex-direction: column;
+    }
   }
 }

@@ -15,16 +15,37 @@
   @extend %grid-container;
   @include flexbox (flex-end);
 
+  @include breakpoint (small) {
+    width: 100%;
+    @include flexbox (center);
+  }
+
   .inner-container {
     width: 50%;
     text-align: center;
+
+    @include breakpoint (small) {
+      width: 100%;
+    }
+    
   }
 
   .form-container {
     width: 50%;
+
+    @include breakpoint (huge) {
+      width: 30%;
+      margin: 100px 10%;
+    }
+
+    @include breakpoint (small) {
+      width: 70%;
+    }
+    @include breakpoint (tiny) {
+      width: 85%;
+    }
   }
 }
-
 
 
 .container-mobile {
@@ -37,9 +58,6 @@
 }
 
 
-
-
-
 .background-img {
   width: 100%;
   position: absolute;
@@ -48,10 +66,14 @@
   left: 0;
   transform: translateY(-9%);
 
+  @include breakpoint (huge) {
+    transform: translateY(-20%);
+  }
   @include breakpoint (large) {
     transform: translateX(-10%);
+    width: auto;
   }
   @include breakpoint (medium) {
-    transform: translateX(-9%);
+    transform: translateX(-12%);
   }
 }
